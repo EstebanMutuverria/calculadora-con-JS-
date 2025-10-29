@@ -1,16 +1,3 @@
-/* let suma = 0;
-let promedio = 0;
-for (let i = 0; i < 3; i++) {
-    let numero = prompt("Ingrese el número " + (i + 1) + ":");
-    while (isNaN(numero) || !numero) {
-        numero = prompt("Entradas inválida. Ingrese un número válido para el número " + (i+1) + ":");
-    }
-    suma += Number(numero);
-}
-promedio = suma / 3;
-alert("El promedio de los números ingresados es: " + promedio);
- */
-
     let suma = 0;
     let promedio = 0;
     let operacion = prompt("Ingrese la operación a realizar (sumar'+', restar'-', multiplicar'*', dividir'/', promediar, iva):");
