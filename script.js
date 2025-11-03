@@ -35,6 +35,9 @@
         let cantidadDeNumeros = prompt("Ingrese la cantidad de numeros que desea promediar: ");
         if(isNaN(cantidadDeNumeros) || !cantidadDeNumeros || cantidadDeNumeros <= 0){
             cantidadDeNumeros = prompt("Ingrese una cantidad valida de numeros a promediar: ");
+        }
+        else{
+            
             for(let i = 0; i<cantidadDeNumeros; i++){
                 let numero = prompt("Ingrese el numero " + (i+1) + ": ");
                 while(!numero || isNaN(numero)){
