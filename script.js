@@ -33,21 +33,19 @@
         }
     }else if(operacion === 'promediar'){
         let cantidadDeNumeros = prompt("Ingrese la cantidad de numeros que desea promediar: ");
-        if(isNaN(cantidadDeNumeros) || !cantidadDeNumeros || cantidadDeNumeros <= 0){
+        while(isNaN(cantidadDeNumeros) || !cantidadDeNumeros || cantidadDeNumeros <= 0){
             cantidadDeNumeros = prompt("Ingrese una cantidad valida de numeros a promediar: ");
         }
-        else{
-            
-            for(let i = 0; i<cantidadDeNumeros; i++){
-                let numero = prompt("Ingrese el numero " + (i+1) + ": ");
-                while(!numero || isNaN(numero)){
-                    numero = prompt("valor incorrecto. Ingrese nuevamente el numero " + (i+1) + ": ");
-                }
-                suma += Number(numero);
+        for(let i = 0; i<cantidadDeNumeros; i++){
+            let numero = prompt("Ingrese el numero " + (i+1) + ": ");
+            while(!numero || isNaN(numero)){
+                numero = prompt("valor incorrecto. Ingrese nuevamente el numero " + (i+1) + ": ");
             }
+            suma += Number(numero);
         }
-        promedio = suma / cantidadDeNumeros;
-        alert("El promedio de los numeros ingresados es: " + promedio);
+            promedio = suma / cantidadDeNumeros;
+            alert("El promedio de los numeros ingresados es: " + promedio);
+        
     }else if(operacion === 'iva'){
         let numero = prompt("Ingrese un numero: ");
         while(isNaN(numero) || !numero){
